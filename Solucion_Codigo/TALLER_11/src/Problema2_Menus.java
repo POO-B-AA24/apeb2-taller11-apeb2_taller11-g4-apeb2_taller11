@@ -18,11 +18,11 @@ public class Problema2_Menus {
     }
 }
 class Cuenta {
-    private String nombreCliente;
-    private List<Menu> menus;
-    private double subtotal;
-    private double iva;
-    private double valorTotal;
+    public String nombreCliente;
+    public List<Menu> menus;
+    public double subtotal;
+    public double iva;
+    public double valorTotal;
 
     public Cuenta(String nombreCliente) {
         this.nombreCliente = nombreCliente;
@@ -49,9 +49,9 @@ class Cuenta {
     }   
 }
 abstract class Menu {
-    protected String nombrePlato;
-    protected double valorInicialMenu;
-    protected double valorMenu;
+    public String nombrePlato;
+    public double valorInicialMenu;
+    public double valorMenu;
 
     public Menu(String nombrePlato, double valorInicialMenu) {
         this.nombrePlato = nombrePlato;
@@ -66,9 +66,9 @@ abstract class Menu {
     }
 }
 class MenuALaCarta extends Menu {
-    private double valorGuarnicion;
-    private double valorBebida;
-    private double porcentajeServicio;
+    public double valorGuarnicion;
+    public double valorBebida;
+    public double porcentajeServicio;
 
     public MenuALaCarta(String nombrePlato, double valorInicialMenu, double valorGuarnicion, double valorBebida, double porcentajeServicio) {
         super(nombrePlato, valorInicialMenu);
@@ -88,8 +88,8 @@ class MenuALaCarta extends Menu {
     }
 }
 class MenuDelDia extends Menu {
-    private double valorPostre;
-    private double valorBebida;
+    public double valorPostre;
+    public double valorBebida;
 
     public MenuDelDia(String nombrePlato, double valorInicialMenu, double valorPostre, double valorBebida) {
         super(nombrePlato, valorInicialMenu);
@@ -108,8 +108,8 @@ class MenuDelDia extends Menu {
     }
 }
 class MenuNinos extends Menu {
-    private double valorHelado;
-    private double valorPastel;
+    public double valorHelado;
+    public double valorPastel;
 
     public MenuNinos(String nombrePlato, double valorInicialMenu, double valorHelado, double valorPastel) {
         super(nombrePlato, valorInicialMenu);
@@ -128,7 +128,7 @@ class MenuNinos extends Menu {
     }
 }
 class MenuEconomico extends Menu {
-    private double porcentajeDescuento;
+    public double porcentajeDescuento;
 
     public MenuEconomico(String nombrePlato, double valorInicialMenu, double porcentajeDescuento) {
         super(nombrePlato, valorInicialMenu);
